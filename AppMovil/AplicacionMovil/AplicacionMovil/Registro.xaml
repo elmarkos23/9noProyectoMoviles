@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="AplicacionMovil.Registro">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="10">
+      <Grid HorizontalOptions="Start">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Column="0" Grid.Row="0" CornerRadius="300" 
+           BorderColor="LightGreen"
+               HeightRequest="250"
+               WidthRequest="250"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+          <Image x:Name="imgFoto"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+        </Frame>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="btnTomarFoto" Text="Tomar Foto" VerticalOptions="StartAndExpand" BackgroundColor="SkyBlue" CornerRadius="10" TextColor="White" TextTransform="None"/>
+      </Grid>
+      <maps:Map x:Name="myMapa" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="300" />
+      
+      <Button Text="Aceptar" VerticalOptions="EndAndExpand" BackgroundColor="#4CAF50" CornerRadius="10" TextColor="White" TextTransform="None" Clicked="btnRegistro_Clicked"/>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
